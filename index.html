@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isotope Filters Example</title>
+</head>
+<body>
+
+<!-- Filters Section -->
+<div class="filters">
+    <!-- Checkbox Filters -->
+    <div class="filter-group">
+        <h3>Checkbox Filters</h3>
+        <label><input type="checkbox" value=".category-a"> Category A</label>
+        <label><input type="checkbox" value=".category-b"> Category B</label>
+    </div>
+
+    <!-- Radio Filters -->
+    <div class="filter-group">
+        <h3>Radio Filters</h3>
+        <label><input type="radio" name="radio-filter" value="*"> Show All</label>
+        <label><input type="radio" name="radio-filter" value=".brand-x"> Brand X</label>
+        <label><input type="radio" name="radio-filter" value=".brand-y"> Brand Y</label>
+    </div>
+
+    <!-- Select Filter -->
+    <div class="filter-group">
+        <h3>Select Filter</h3>
+        <select class="select-filter">
+            <option value="*">Show All</option>
+            <option value=".category-a">Category A</option>
+            <option value=".category-b">Category B</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <h3>Select Filter</h3>
+        <select class="select-filter">
+            <option value="*">Show All</option>
+            <option value=".category-a">Category A</option>
+            <option value=".category-b">Category B</option>
+        </select>
+    </div>
+
+    <!-- Range Filters -->
+    <div class="filter-group">
+        <h3>Range Filters</h3>
+        <label>Min Price: <input type="number" class="min-price" placeholder="Min"></label>
+        <label>Max Price: <input type="number" class="max-price" placeholder="Max"></label>
+        <button class="price-filter-button">Apply Price Filter</button>
+    </div>
+
+    <!-- Range Slider Filter -->
+    <div class="filter-group">
+        <h3>Range Slider Filter</h3>
+        <input type="range" class="price-range" min="0" max="1000" step="10" value="500">
+        <span class="range-value">500</span>
+    </div>
+
+    <!-- Button Filters -->
+    <div class="filter-group">
+        <h3>Button Filters</h3>
+        <button data-filter="*">Show All</button>
+        <button data-filter=".on-sale">On Sale</button>
+        <button data-filter=".new-arrival">New Arrival</button>
+    </div>
+</div>
+
+<!-- Products Section -->
+<div class="products grid">
+    <div class="product category-a brand-x" data-price="200">Product 1</div>
+    <div class="product category-b brand-y" data-price="400">Product 2</div>
+    <div class="product category-a brand-x on-sale" data-price="600">Product 3</div>
+    <div class="product category-b brand-y new-arrival" data-price="800">Product 4</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="filter.js"></script>
+
+</body>
+</html>
